@@ -1,0 +1,51 @@
+#holder {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	height: 585px;
+	width: 1200px;
+	background-color: grey;
+}
+
+#marketCards {
+	text-align: right;
+	position: relative;
+	height: 300px;
+	overflow-x:visible;
+	overflow-y:scroll;
+}
+
+img {
+	margin-left: 5px;
+	width: 200px;
+}
+
+#libraryCards {
+	text-align: right;
+	position: relative;
+	overflow-x:visible;
+	overflow-y:scroll;
+	height: 300px;
+}
+
+
+#buttonBar {
+	z-index: 1;
+	background-color: black;
+	position: relative;
+	margin-top: -25px;
+	text-align: center;
+}
+
+button {
+	width: 120px;
+	height: 30px;
+}
+
+#filter {
+	z-index: 2;
+	position: absolute;
+	width: 150px;
+	height: 585px;
+	background-color: green;
+}
