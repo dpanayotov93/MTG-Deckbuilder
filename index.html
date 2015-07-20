@@ -3,21 +3,45 @@
 <head>
     <title>MTG Duel</title>
     <link rel="stylesheet" href="css/main.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-impromptu.css" />
 	<script src="js/script.js" type="text/javascript"></script>
+	<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-impromptu.js" type="text/javascript"></script>
 	<script src="js/card.js" type="text/javascript"></script>
 </head>
 <body onload="testUI()">
 	<div id="holder">
-		<div id="filter">
-			
+	<div id="loading"><p>LOADING</p></div>
+		<div id="filterBar">
+			<div id='set'>
+				<H2>SET</H2>
+				<select onchange="changeSet(this.value);">
+					<option value="404"></option>
+					<option value="frf">Fate Reforged</option>
+					<option value="ktk">Khans of Tarkir</option>
+					<option value="jou">Journey into Nyx</option>
+					<option value="bng">Born of the Gods</option>
+					<option value="ths">Theros</option>
+				</select>
+			</div>
+			<div id="filters">
+				<h2>FILTERS</h2>
+				<select>
+					<option value="404"></option>
+				</select>
+			</div>
+			<div id="search">
+				<h2>SEARCH</h2>
+				<input type="text" name="searchd">
+			</div>
 		</div>
 		<div id="marketCards">
 
 		</div>
 		<div id="buttonBar">
 			<button onclick="saveDeck()">SAVE</button>
-			<button onclick="loadDeck()">LOAD</button>
+			<button onclick="loadDeck('my_data')">LOAD</button>
+			<input type="file" id="fileInput" onchange="handleFiles(this.files)"/>
 		</div>
 		<div id="libraryCards">
 
